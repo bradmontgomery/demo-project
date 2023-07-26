@@ -1,0 +1,22 @@
+div.band {
+    padding:0;
+    margin: 0 2px;
+    border: 1px solid black;
+    width: 20px;
+    height: 400px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+}
+  
+div.item {
+    width: 100%;
+    border-top: 1px solid black;
+    height: 10px;
+    bottom: 0px;
+}
+  
+div.item.l0 {background-color: blue; }
+div.item.l1 {background-color: green; }
+div.item.l2 {background-color: yellow; }
+div.item.l3 {background-color: red; }
