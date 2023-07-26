@@ -1,4 +1,8 @@
-# React + Vite
+# demo project
+
+This is a simple React demo project created with vite.
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
