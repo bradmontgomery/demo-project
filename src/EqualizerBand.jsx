@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './EqualizerBand.css';
 
 // For this component, the MAX volume is 40
@@ -19,13 +19,17 @@ const updateVolume = (volume) => {
     }
 }
 
-function EqualizerBand() {
+function EqualizerBand(props) {
 
-    const [volume, setVolume] = 
-        useState(randomVolume());
+    const [volume, setVolume] = useState(randomVolume());
 
-    setInterval(() => { 
-        setVolume(updateVolume) }, 1500);
+    //setInterval(() => { setVolume(updateVolume) }, 1500);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setVolume(updateVolume)
+        }, 250);
+        return () => clearInterval(interval);
+    }, []);
 
     let items = [];
     for(let i=0; i < volume; i++) {
