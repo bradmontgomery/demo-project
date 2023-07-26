@@ -22,6 +22,8 @@ function App() {
     
   )
   
+  // The following is temporarily commented out for now.
+
   /*
   return (
     <>
