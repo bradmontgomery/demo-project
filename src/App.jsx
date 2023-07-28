@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import ApiFetcher from './ApiFetcher';
 import Clock from './Clock';
 import EqualizerBand from './EqualizerBand';
 
@@ -49,6 +50,7 @@ function App() {
         <EqualizerBand />
         <EqualizerBand />
       </div>
+      <ApiFetcher />
     </>
   )
 
