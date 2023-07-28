@@ -23,7 +23,7 @@ function EqualizerBand(props) {
 
     const [volume, setVolume] = useState(randomVolume());
 
-    //setInterval(() => { setVolume(updateVolume) }, 1500);
+    // setInterval(() => { setVolume(updateVolume) }, 1500);
     useEffect(() => {
         const interval = setInterval(() => {
             setVolume(updateVolume)
@@ -46,7 +46,6 @@ function EqualizerBand(props) {
     } 
 
     return (
-
         <div className="band">
             {items}
         </div>
