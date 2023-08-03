@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import './Clock.css';
 
 function getCurrentTime() {
     const t = new Date();
@@ -13,8 +13,15 @@ function Clock() {
     setCurrentTime(getCurrentTime())
   }, 1000);
 
+  const dt = new Date(currentTime);
+  const time = dt.toLocaleTimeString('en-US');
+  const date = dt.toLocaleDateString();
+
   return (
-    <div>{ currentTime }</div>
+    <div id="clock">
+      <div id="time">{ time }</div>
+      <div id="date">{ date }</div>
+    </div>
   )
 }
 
