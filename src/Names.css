@@ -1,0 +1,47 @@
+ul {
+    margin:0;
+    padding:0;
+    text-align: left;
+}
+
+ul > li {
+    margin: 1em 0.75em 1em 0.5em;
+    padding: 0.5em;
+    border-bottom: 1px solid #ccc;
+    list-style-type: none;
+    clear: both;
+    position: relative;
+}
+
+.left {
+    display: inline-block;
+    padding: .5em 1em;
+}
+.right {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+ul > li > button {
+    background-color: #fdd;
+    margin: .25em;
+    padding: .5em 1em;
+}
+
+input[type="text"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    font-size: larger;
+    border: 2px solid #5a5;
+    color: #080;
+}
+
+input[type="submit"] {
+    font-size: larger;
+    padding: 1em;
+    border: 2px solid #5a5;
+    background-color: #5a5;
+    color: white;
+}
