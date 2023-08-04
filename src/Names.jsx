@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './Names.css'
 
 // This component should stay in sync with our demo-server API.
 // Our api supports:
@@ -19,16 +20,46 @@ function Names() {
             });
     }
 
+    function createName(newName) {
+        alert("TODO: create " + newName)
+        /*
+        const options = {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({name: newName})
+        }
+        fetch("http://127.0.0.1:3000/api", options)
+            .then((response) => response.json())
+            .then((json) => {
+                // update the application state
+                setNames([
+                    ...names,
+                    json
+                ])
+            })
+        */
+    }
+
+
     useEffect(() => {
         fetchNames()
     }, []);
+
+    // Handle form submission
+    function handleSubmit(event) {
+        event.preventDefault();
+        createName(event.target.name.value);
+    }
 
     // Each object looks like: {id: 1, name: "brad"}
     const items = names.map((obj) => {
         return (
             <li key={'id-' + obj.id}>
-                <span>{obj.name}</span>
-                <button>Delete</button>
+                <span className="left">{obj.name}</span>
+                <button className="right">Delete</button>
             </li>
         );
     });
@@ -38,9 +69,9 @@ function Names() {
             <ul>
                 {items}
             </ul>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <p>
-                    <input placeholder="Add a name" />
+                    <input name="name" placeholder="Add a name" type="text" />
                     <input type="submit" value="Add" />
                 </p>
             </form>
