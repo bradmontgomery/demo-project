@@ -6,10 +6,12 @@ import './App.css'
 import ApiFetcher from './ApiFetcher';
 import Clock from './Clock';
 import EqualizerBand from './EqualizerBand';
+import Names from './Names';
 
 function App() {
   const [count, setCount] = useState(0)
 
+/*
   return (
     <>
       <div>
@@ -51,8 +53,20 @@ function App() {
         <EqualizerBand />
       </div>
       <ApiFetcher />
+      <Names />
     </>
   )
+  */
+
+ // Temporary disable the other components, so we
+ // can focus on Names.
+ return (
+  <div>
+    <h1>List of names</h1>
+    <Names />
+  </div>
+ );
+
 
 }
 
