@@ -21,8 +21,6 @@ function Names() {
     }
 
     function createName(newName) {
-        alert("TODO: create " + newName)
-        /*
         const options = {
             method: "POST",
             mode: "cors",
@@ -40,7 +38,6 @@ function Names() {
                     json
                 ])
             })
-        */
     }
 
 
