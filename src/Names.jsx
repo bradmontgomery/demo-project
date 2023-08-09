@@ -4,8 +4,9 @@ import './Names.css'
 // This component should stay in sync with our demo-server API.
 // Our api supports:
 // - Reading a list of names.
-// - TODO: Adding a name to the list & save to the API
-// - TODO: Delete names from the list.
+// - Adding a name to the list & save to the API
+// - Delete names from the list.
+// - Bonus points? Add ability to update a name?
 
 function Names() {
     const [ names, setNames ] = useState([])
@@ -20,7 +21,7 @@ function Names() {
             });
     }
 
-    function createName(newName) {
+    function createName(newName) { // POST a new name to the API
         const options = {
             method: "POST",
             mode: "cors",
@@ -40,6 +41,20 @@ function Names() {
             })
     }
 
+    function deleteName(id) { // send a DELETE request to the API
+        const options = {
+            method: "DELETE",
+            mode: "cors",
+        }
+        const url = "http://127.0.0.1:3000/api/" + id;
+        fetch(url, options)
+            .then((response) => response.json())
+            .then((json) => {
+                console.log("Deleting gave us: ", json);
+                fetchNames(); // re-create the application state from the database.
+            })
+    }
+
 
     useEffect(() => {
         fetchNames()
@@ -51,12 +66,20 @@ function Names() {
         createName(event.target.name.value);
     }
 
+    // Handle the "delete name" button click
+    function handleClick(event) {
+        console.log("Delete: " + event.target.id);
+        deleteName(event.target.id);
+    }
+
     // Each object looks like: {id: 1, name: "brad"}
     const items = names.map((obj) => {
         return (
             <li key={'id-' + obj.id}>
                 <span className="left">{obj.name}</span>
-                <button className="right">Delete</button>
+                <button id={obj.id}
+                    onClick={handleClick} 
+                    className="right">Delete</button>
             </li>
         );
     });
