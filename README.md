@@ -12,6 +12,10 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
+## React Router
+This project uses react router. Check out the tutorial at: https://reactrouter.com/en/main/start/tutorial
+
+
 ## The Server!
 
 The `<Names>` component in this project needs access to an API. That API

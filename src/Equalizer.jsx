@@ -18,6 +18,11 @@ export default function Equalizer() {
         <EqualizerBand />
         <EqualizerBand />
         <EqualizerBand />
+        <EqualizerBand />
+        <EqualizerBand />
+        <EqualizerBand />
+        <EqualizerBand />
+        <EqualizerBand />        
       </div>
     )
 }
