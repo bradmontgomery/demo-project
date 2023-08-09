@@ -86,6 +86,13 @@ function Names() {
 
     return (
         <>
+            <p>
+                <strong>NOTE!</strong> {' '}
+                This component requires a running API server;<br/>
+                See the {' '}
+                <a href="https://github.com/bradmontgomery/demo-server/">demo-server</a>
+                {' '} project on Github.
+            </p>
             <ul>
                 {items}
             </ul>
