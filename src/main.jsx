@@ -17,7 +17,7 @@ import Names from './Names.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/demo-project/",
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
