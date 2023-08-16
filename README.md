@@ -21,4 +21,4 @@ This project uses react router. Check out the tutorial at: https://reactrouter.c
 The `<Names>` component in this project needs access to an API. That API
 is powered by the [demo-server project](https://github.com/bradmontgomery/demo-server/)
 
-Hint: This is sneaky little edit.
+Hint: This is sneaky little edit. Whoo!
